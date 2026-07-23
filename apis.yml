@@ -1,9 +1,31 @@
 aid: away
 name: Away
-description: 'Away is a company surfaced as a portfolio company of accel, battery-ventures, forerunner-ventures
-  and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: >-
+  Away (Away: Built for modern travel) is a direct-to-consumer travel and
+  lifestyle brand that designs and sells thoughtfully engineered suitcases,
+  bags, and travel accessories built for modern travel. Its storefront at
+  awaytravel.com runs on Shopify and is agent-commerce ready: it publishes an
+  /llms.txt and /agents.md with agent instructions, implements the Universal
+  Commerce Protocol (UCP, ucp.dev) service dev.ucp.shopping over a Model
+  Context Protocol (MCP) endpoint for buyer-approved catalog search, cart, and
+  checkout, and exposes Shopify Customer Account OpenID Connect authentication.
+  Surfaced in the API Evangelist network as a portfolio company of Accel,
+  Battery Ventures, and Forerunner Ventures; enriched from its live public
+  discovery surfaces.
 url: https://raw.githubusercontent.com/api-evangelist/away/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: http://www.awaytravel.com/cdn/shop/files/12EVER25_Ecomm-HPH-Desktop-1_9936be52-b9e2-4e19-985f-78aa1d091f3a.jpg?v=1771448528
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -14,16 +36,78 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Consumer
-apis: []
+- Travel
+- Retail
+- E-commerce
+- Luggage
+- Agent Commerce
+- Shopify
+- MCP
+apis:
+- name: Away Agent Commerce (UCP / MCP)
+  description: >-
+    Agent-driven commerce surface for the Away storefront implementing the
+    Universal Commerce Protocol (dev.ucp.shopping) over an MCP endpoint, with
+    catalog search, cart, checkout, fulfillment, discount, and order
+    capabilities. Checkout requires explicit buyer approval at payment.
+  humanURL: https://www.awaytravel.com/llms.txt
+  baseURL: https://www.awaytravel.com/api/ucp/mcp
+  tags:
+  - Agent Commerce
+  - MCP
+  - UCP
+  - E-commerce
+  properties:
+  - type: MCPServer
+    url: mcp/away-mcp.yml
+  - type: WellKnown
+    url: well-known/away-well-known.yml
+  - type: LLMsTxt
+    url: llms/away-llms.txt
+  - type: Authentication
+    url: authentication/away-authentication.yml
+  - type: OAuthScopes
+    url: scopes/away-scopes.yml
+  - type: AgentSkill
+    url: skills/away-agents.md
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/away-domain-security.yml
 - type: Website
   url: http://www.awaytravel.com
+- type: MCPServer
+  url: mcp/away-mcp.yml
+- type: WellKnown
+  url: well-known/away-well-known.yml
+- type: LLMsTxt
+  url: llms/away-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Authentication
+  url: authentication/away-authentication.yml
+- type: OAuthScopes
+  url: scopes/away-scopes.yml
+- type: Conformance
+  url: conformance/away-conformance.yml
+- type: Login
+  url: https://accounts.awaytravel.com/
+- type: PrivacyPolicy
+  url: https://www.awaytravel.com/policies/privacy-policy
+- type: TermsOfService
+  url: https://www.awaytravel.com/policies/terms-of-service
+- type: RefundPolicy
+  url: https://www.awaytravel.com/policies/refund-policy
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

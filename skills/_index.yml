@@ -1,0 +1,17 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.awaytravel.com/agents.md
+skills:
+- file: away-agents.md
+  name: Away agent shopping instructions
+  description: >-
+    Provider-published agent instructions (verbatim /agents.md, mirrored at
+    /llms.txt) for browsing the catalog and running buyer-approved UCP checkout
+    over the store's MCP endpoint.
+  api: mcp/away-mcp.yml
+  operations:
+  - search_catalog
+  - create_cart
+  - create_checkout
+  - update_checkout
+  - complete_checkout

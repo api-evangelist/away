@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.awaytravel.com/.well-known/openid-configuration
+standards:
+- id: oauth2
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server (RFC 8414) advertises authorizationCode + refresh_token grants
+- id: oidc
+  conforms: true
+  evidence: /.well-known/openid-configuration with RS256 id_token and standard claims
+- id: rfc7636-pkce
+  conforms: true
+  evidence: code_challenge_methods_supported = [S256]
+- id: rfc8414-oauth-authorization-server-metadata
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server returns 200 with issuer/token/authorization endpoints
+- id: ucp-universal-commerce-protocol
+  conforms: true
+  evidence: /.well-known/ucp advertises dev.ucp.shopping service v2026-04-08 over MCP transport
+- id: mcp-model-context-protocol
+  conforms: true
+  evidence: agent-commerce MCP endpoint POST /api/ucp/mcp documented in /llms.txt and /.well-known/ucp
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404

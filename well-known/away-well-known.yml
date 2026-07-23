@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.awaytravel.com/.well-known/
+host: https://www.awaytravel.com
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: away-openid-configuration.json
+  note: Shopify customer-account OpenID Connect discovery
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: away-oauth-authorization-server.json
+  note: RFC 8414 authorization-server metadata (Shopify customer accounts)
+- path: /.well-known/ucp
+  status: 200
+  file: away-ucp.json
+  note: Universal Commerce Protocol (ucp.dev) merchant profile — agent commerce
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
