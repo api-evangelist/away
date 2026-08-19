@@ -4,11 +4,9 @@ status: published
 source: https://www.awaytravel.com/llms.txt
 server:
   name: away-ucp-shopping
-  description: >-
-    Away's storefront exposes an agent-commerce MCP endpoint implementing the
-    Universal Commerce Protocol (UCP, ucp.dev) service dev.ucp.shopping. Agents
-    discover it via /.well-known/ucp and /llms.txt. Checkout requires explicit
-    human (buyer) approval at the moment of payment. Built on Shopify, which
+  description: Away's storefront exposes an agent-commerce MCP endpoint implementing the Universal Commerce
+    Protocol (UCP, ucp.dev) service dev.ucp.shopping. Agents discover it via /.well-known/ucp and /llms.txt.
+    Checkout requires explicit human (buyer) approval at the moment of payment. Built on Shopify, which
     supports UCP natively across stores.
   transport: http
   protocol: ucp
@@ -20,15 +18,11 @@ server:
   supported_versions:
   - '2026-04-08'
   - '2026-01-23'
-  authentication: >-
-    Read/browse is unauthenticated. Buyer-authorized checkout via Shopify
-    customer accounts (OpenID Connect, scope customer-account-mcp-api:full) or
-    Shop Pay via the Shop skill (https://shop.app/SKILL.md).
-notes: >-
-  Live tools/list over the raw endpoint returns HTTP 422 without full UCP
-  session/version negotiation; the tool surface below is transcribed verbatim
-  from the store's published /llms.txt agent flow and the /.well-known/ucp
-  capability manifest, not fabricated.
+  authentication: Read/browse is unauthenticated. Buyer-authorized checkout via Shopify customer accounts
+    (OpenID Connect, scope customer-account-mcp-api:full) or Shop Pay via the Shop skill (https://shop.app/SKILL.md).
+notes: Live tools/list over the raw endpoint returns HTTP 422 without full UCP session/version negotiation;
+  the tool surface below is transcribed verbatim from the store's published /llms.txt agent flow and the
+  /.well-known/ucp capability manifest, not fabricated.
 tools:
 - name: search_catalog
   description: Find products matching the buyer's intent (dev.ucp.shopping.catalog.search)
@@ -49,3 +43,11 @@ capabilities:
 - dev.ucp.shopping.discount
 - dev.ucp.shopping.order
 - dev.shopify.catalog
+deployment:
+  mode: remote
+  endpoint: https://www.awaytravel.com/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
