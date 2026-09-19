@@ -55,7 +55,7 @@ tags:
 - Retail
 - E-Commerce
 - Luggage
-- Agent Commerce
+- Agentic Commerce
 - Shopify
 - MCP
 tags_raw:
@@ -78,9 +78,9 @@ apis:
   humanURL: https://www.awaytravel.com/llms.txt
   baseURL: https://www.awaytravel.com/api/ucp/mcp
   tags:
-  - Agent Commerce
+  - Agentic Commerce
   - MCP
-  - UCP
+  - Universal Commerce Protocol
   - E-Commerce
   tags_raw:
   - Agent Commerce
