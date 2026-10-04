@@ -100,6 +100,9 @@ apis:
     url: scopes/away-scopes.yml
   - type: AgentSkill
     url: skills/away-agents.md
+  x-surface: platform-generated
+  x-platform: shopify
+  x-platform-surface: ucp
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
