@@ -64,6 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Away is a company surfaced as a portfolio company of accel, battery-ventures, forerunner-ventures and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.
+Away (Away: Built for modern travel) is a direct-to-consumer travel and lifestyle brand that designs and sells thoughtfully engineered suitcases, bags, and travel accessories built for modern travel. Its storefront at awaytravel.com runs on Shopify and is agent-commerce ready: it publishes an /llms.txt and /agents.md with agent instructions, implements the Universal Commerce Protocol (UCP, ucp.dev) service dev.ucp.shopping over a Model Context Protocol (MCP) endpoint for buyer-approved catalog search, cart, and checkout, and exposes Shopify Customer Account OpenID Connect authentication. Surfaced in the API Evangelist network as a portfolio company of Accel, Battery Ventures, and Forerunner Ventures; enriched from its live public discovery surfaces.
 
-Backed by: accel, battery-ventures, forerunner-ventures — http://www.awaytravel.com
+**Areas:** Company · Consumer · Travel · Retail · E-Commerce · Luggage · Agentic Commerce · Shopify · MCP
+
+## Away on APIs.io
+
+Everything profiled for Away is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/away/](https://apis.io/providers/away/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Away Agent Commerce (UCP / MCP)](https://apis.io/apis/away/away-agent-commerce-ucp-mcp/) — Agent-driven commerce surface for the Away storefront implementing the Universal Commerce Protocol (dev.ucp.shopping) over an MCP endpoint, with catalog…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [away-ucp-shopping](https://apis.io/servers/away/away-ucp-shopping/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Away Authentication](https://apis.io/security/away/away-authentication/)
+- [Away Domain Security](https://apis.io/security/away/away-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Away Scopes](https://apis.io/scopes/away/away-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](http://www.awaytravel.com)
+- [Blog](https://www.awaytravel.com/blogs/the-away-pages)
+- [Terms of service](https://www.awaytravel.com/policies/terms-of-service)
+- [Privacy policy](https://www.awaytravel.com/policies/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 22.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 27.6 |
+
+**Agent readiness 17.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | platform (partial credit) |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/away/](https://apis.io/providers/away/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Away: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/away/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
